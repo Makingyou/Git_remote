@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creador de CV</title>
+  <link rel="stylesheet" href="CVConstructor.css">
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-3">
+    <h1>Creador de CV en línea</h1>
+    <p>Destácate en el mercado laboral con un currículum profesional</p>
+  </header>
+
+  <main class="container mt-4">
+    <h2 class="mb-3">¡Crea tu currículum ahora!</h2>
+
+    <form id="resumeForm">
+      <div class="form-group">
+        <label for="resumeUpload">Carga tu currículum:</label>
+        <input type="file" class="form-control-file" id="resumeUpload" accept=".pdf, .doc, .docx">
+      </div>
+
+      <div class="form-group">
+        <label for="industrySelect">Selecciona la industria:</label>
+        <select class="form-control" id="industrySelect">
+          <option value="it">Tecnología de la Información</option>
+          <option value="finance">Finanzas</option>
+          <option value="marketing">Marketing</option>
+          <option value="healthcare">Cuidado de la Salud</option>
+          <option value="education">Educación</option>
+          <option value="engineering">Ingeniería</option>
+          <option value="design">Diseño</option>
+          <option value="sales">Ventas</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="jobInterests">Intereses laborales:</label>
+        <input type="text" class="form-control" id="jobInterests" placeholder="Ingresa tus intereses laborales">
+      </div>
+
+      <div class="form-group">
+        <label for="emailInput">Correo electrónico:</label>
+        <input type="email" class="form-control" id="emailInput" placeholder="Ingresa tu correo electrónico">
+      </div>
+
+      <button type="submit" class="btn btn-primary">Generar currículum</button>
+    </form>
+
+    <div id="resumeExamples">
+      <h3>Ejemplos de currículums:</h3>
+      <div id="itExamples" class="industry-examples">
+        <h4>Tecnología de la Información</h4>
+        <p>A continuación, se muestra un ejemplo de currículum para la industria de Tecnología de la Información:</p>
+        <a href="https://www.micvideal.es/wp-content/uploads/sites/2/2021/11/ejemplo-de-cv-de-analista-de-sistemas-con-modelo-creativo.svg" target="_blank">
+          <img src="resume-example-it.svg" alt="Ejemplo de currículum de Tecnología de la Información">
+        </a>
+      </div>
+      <!-- Rest of the industry examples -->
+    </div>
+    
+    <div id="resumeOutput" class="mt-5">
+      <!-- Esta sección mostrará el currículum generado -->
+    </div>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>Derechos de autor &copy; 2023 Creador de CV en línea. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    document.getElementById('resumeForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevenir el envío del formulario
+
+      // Obtener los valores del formulario
+      const resumeFile = document.getElementById('resumeUpload').files[0];
+      const industry = document.getElementById('industrySelect').value;
+      const jobInterests = document.getElementById('jobInterests').value;
+      const email = document.getElementById('emailInput').value;
+
+      // Realizar validación o procesamiento adicional si es necesario
+
+      // Generar el currículum
+    });
+  </script>
+</body>
+</html>
